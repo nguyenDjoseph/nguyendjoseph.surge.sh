@@ -1,33 +1,217 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta|Open+Sans|Raleway');
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.hdr {
+  margin: 2px 0px;
+}
+
 .App {
-  text-align: center;
+  display: block;
+  position: absolute;
+  overflow: scroll;
+  z-index: 1;
+  height: 110vh;
+  width: 100%;
+  padding: 0 1em;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.home {
+  position: fixed;
+  top: 40vh;
+  left: 20vw;
+  transition: top 0.5s;
+  -webkit-transition: top 0.5s;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.home-mobile {
+  display: block;
+  position: fixed;
+  top: 40vh;
+  left: 0vw;
+  transition: top 0.5s, width 0.7s;
+  -webkit-transition: top 0.5s, width 0.7s;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.about-projects-container {
+  width: 40vw;
+  display: none;
+  position: fixed;
+  top: 20vh;
+  left: 20vw;
+  color: white;
+}
+
+.about-projects-container-mobile {
+  width: 100vw;
+  display: none;
+  position: fixed;
+  top: 0vh;
+  left: 0vw;
+  color: white;
+}
+
+.about-box {
+  transition: top .5s, background .5s;
+  -webkit-transition: top .5s, background .5s;
+  background: #000000;
+  padding: 1em;
+}
+
+.about-box-mobile {
+  transition: top .5s, background .5s;
+  -webkit-transition: top .5s, background .5s;
+  background: rgba(115, 177, 242, 0.7);
+  padding: 1em;
+  height: 70vh;
+}
+
+.projects-box {
+  background: none;
+  padding: 0.5em;
+}
+
+.custom-typist {
+  background-color: black;
+  padding: 1em;
+}
+
+.social {
+  display: none;
+  background-color: black;
+  margin-bottom: -3px;
+}
+
+.moveUpHome {
+  top: 12vh;
+}
+
+.moveUpHome-mobile {
+  top: 0;
+  width: 100vw;
+}
+
+.moveUpAbout {
+  top: 29vh;
+}
+
+.moveUpAbout-mobile {
+  top: 20vh;
+}
+.visible {
+  display: block;
+}
+p {
+  line-height: 2em;
+}
+
+.about-box ul li,
+.about-box-mobile ul li {
+  display: inline-block;
+  list-style: none;
+  background-color: rgb(236, 213, 63);
+  text-transform: uppercase;
+  font-size: 10px;
+  padding: 3px 5px;
+  margin-left: 5px;
+  color: #333333;
+  /* border-radius: 10px; */
+}
+
+.about-box-mobile ul li {
+  font-size: 0.7em;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 0.7em;
+}
+
+.about-box li:hover,
+.about-box-mobile li:hover {
+  background-color: rgb(254, 228, 57);
+  cursor: grabbing;
+}
+
+.about-box h1 {
+  font-size: 1.7em;
+}
+
+.about-box-mobile h1 {
+  font-size: 3em;
+}
+
+.underline {
+  border-bottom: 2.3px red solid;
+}
+
+.highlight {
+  color:#f2f45f;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 6px;
+  text-align: center;
+  width: 60px;
+  margin: 4px 10px 15px 0px;
+}
+
+.skill i {
+  font-size: 57px;
+}
+
+.social-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social-container a {
+  color: white;
+  text-decoration: none;
+}
+
+.social-container a:hover {
+  color: #252934;
+}
+
+.socialz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 40px;
+  text-align: center;
+  width: 40px;
+  margin: 8px 30px 8px 0px;
+}
+
+svg {
+  width: 60px;
 }
