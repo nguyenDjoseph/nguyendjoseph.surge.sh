@@ -9,12 +9,10 @@ class App extends Component {
     super(props, context);
 
     this.state = {
-      scrollPosition: 0,
-      isMobile: false,
+      scrollPosition: 0
     }
 
     this.recordScroll = this.recordScroll.bind(this);
-    this.isMobile = this.isMobile.bind(this);
   };
 
   componentDidMount() {
@@ -32,24 +30,10 @@ class App extends Component {
     })
   }
 
-  isMobile(){
-    if (window.outerWidth < 768) {
-      this.setState({
-        isMobile: true
-      })
-    } else {
-      this.setState({
-        isMobile: false
-      })
-    }
-  }
-
   render() {
     return (
       <div className="App">
-        <Content
-            isMobile = {this.state.isMobile}
-          />
+        <Content/>
         <Three/>
       </div>
     );
